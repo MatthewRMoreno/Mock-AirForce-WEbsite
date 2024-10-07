@@ -1,0 +1,114 @@
+.new-section{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2rem 0;
+}
+.NDR-news{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+	background-color: rgb(5, 9, 40, 0.3);
+	backdrop-filter: blur(20px);
+	box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+	border: 1px solid rgba(255, 255, 255, 0.18);
+    height: 36vw;
+    width: 26vw;
+    font-size: 1vw;
+    color: white;
+    line-height: 4rem;
+}
+.NDR-news a:hover{
+    cursor: pointer;    
+    text-decoration: underline;
+}
+.Construction-image{
+    height: 36vw;
+}
+.MAR-image{
+    height: 36vw;
+}
+.MAR-image:hover{
+    scale: 110%;
+    transition: 400ms;
+}
+.IFP-container{
+    display: flex;
+    justify-content: center;
+    height: auto;
+    text-decoration: none;
+    color: #000000;
+}
+.IFP-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d9d9d9;
+    width: 95vw;
+    border-radius: 30px;
+    height: 10vw;
+    font-size: 2.5vw;
+    margin: 0 0 2rem 0;
+}
+.IFP-button:hover{
+    background-color: #b0adad;
+}
+.leader-button{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    border-radius: 6px;
+    padding: 5px 5px;
+    background: white;
+    width: 26vw;
+    height:8vw;
+    justify-content: center;
+    text-decoration: none;
+    color: #000;
+}
+.leader-button:hover{
+    background-color: #cff4ff;
+}
+.leader-button-text{
+    font-size: 2vw;
+    text-align: center;
+}
+
+.about-section{
+	padding: 2.5rem 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+.NDR-about-title{
+	text-align: justify;
+	font-weight: 800;
+	font-size: 3vw;
+	letter-spacing: 0.14em;
+	color: #fff;
+	padding: 1rem 2rem;
+    margin: 0 10rem 0 10rem;
+}
+.NDR-about-text{
+	color: #fff;
+	margin: 0 10rem 0 10rem;
+	text-align: justify;
+	font-size: 1.3vw;
+	line-height: 1.5em;
+	padding: 1rem 2rem;
+	font-weight: 500;
+}
+.about-box{
+    border-radius: 30px;
+	background-color: rgb(5, 9, 40, 0.3);
+	backdrop-filter: blur(20px);
+	box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+	border: 1px solid rgba(255, 255, 255, 0.18);
+    width: 68vw;
+    height: 20vw;
+}
+.NDR-Coin{
+    height: 20vw;
+}

@@ -1,0 +1,651 @@
+body{
+    margin: 0;
+    padding: 0;
+    color: #f1f0f1;
+}
+
+.CB-container{
+    width: auto;
+    height: auto;
+}
+/* Glass Card CSS */
+.glass-card-container {
+    width: auto;
+    background: linear-gradient(180deg, #030551 0%, rgba(3, 5, 81, 0.4) 100%);
+    position: relative;
+    padding: 0 0 2rem 0;
+}
+.MVM-cards{
+    display: flex;
+    justify-content: space-evenly;
+}
+.glass-card{
+    margin-top: 3.5rem;
+    flex-basis: 0;
+    flex-grow: 1;
+   max-width: 22%;
+   height: 12em;
+   background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+   backdrop-filter: blur(20px);
+   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+   border: 1px solid rgba(255, 255, 255, 0.18);
+   border-radius: 15px;
+   overflow: hidden;
+}
+.glass-card:hover{
+    background-color: #58b1b7;
+    transition: 250ms linear;
+}
+.glass-card::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: -500px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, #fff, transparent);
+    transition: 1s;
+}
+.glass-card:hover::before{
+    left: 100%;
+}
+.glass-card-title{
+    color: #fff;
+    font-size: 2.8125rem;
+    letter-spacing: 0.1em;
+    position: relative;
+    text-align: center;
+    margin: none;
+}
+.glass-card-contents{
+    color: #fff;
+    text-align: center;
+    padding: 1rem 2.18rem 0 2.18rem;
+    font-size: 1.1em;
+}
+
+/* About CSS */
+.about-title{
+    text-align: center;
+    font-weight: 800;
+    font-size: 3.125rem;
+    letter-spacing: 0.14em;
+    color: #fff;
+    padding: 2rem 0 2rem 0;
+}
+.about-text{
+    color: #fff;
+    margin: 0 10rem 0 10rem;
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 1.8em;
+}
+/* Divisions CSS */
+.divisions-container{
+    width: 100%;
+    position: relative;
+    padding-bottom: 6rem;
+}
+.divisions{
+    font-weight: 800;
+    font-size: 3.125rem;
+    text-align: center;
+    letter-spacing: 0.14em;
+    color: #997005;
+    margin: 0;
+    padding: 2rem 0 2rem 0;
+}
+.division-accordion-image{
+    max-width: 100%;
+    display: block;
+}
+.division-wrapper{
+    max-width: 90%;
+    margin-inline: auto;
+    padding-inline: 1rem;
+}
+.division-accordion * {
+    margin: 0;
+}
+.division-accordion{
+    --_button-size: 3rem;
+    --_panel-padding: 0.5rem;
+    --_panel-gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+@media (min-width: 45em) {
+    .division-accordion {
+        flex-direction: coumn;
+        height: 50rem;
+    }
+}
+.division-accordion-image{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    transition: filter 500ms;
+}
+.division-accordion-panel:has([aria-expanded="true"]) .division-accordion-image{
+    filter: brightness(0.5);
+}
+.division-accordion-panel:hover{
+    cursor:pointer;
+}
+#division-accordion-title {
+    font-weight: 700;
+    font-size: 1.65rem;
+    color: #fff;
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    opacity: 1;
+    text-align: center;
+    padding: 2.5rem 0 4rem 0;
+}
+.division-accordion-panel:has([aria-expanded="true"]) #division-accordion-title{
+    filter: brightness(1);
+}
+.division-accordion-panel:has([aria-expanded="false"]) #division-accordion-title{
+    opacity: 0;
+}
+.division-accordion-content > p {
+    font-size: 1.15rem;
+    transform: translateY(2rem);
+    opacity: 0;
+    transition: transform 500ms 250ms, opacity 500ms 250ms;
+    color: #fff;
+    margin-left: 8rem;
+    margin-right: 8rem;
+    text-align: center;
+}
+.division-accordion-trigger{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: var(--_panel-gap);
+    flex-direction: row-reverse;
+    background: transparent;
+    border: 0;
+    font-weight: 700;
+    font-size: 1.65rem;
+    color: #fff;
+    justify-content: center;
+    margin: .75rem 0 2rem 0;
+}
+.division-accordion-trigger:hover{
+    cursor: pointer;
+}
+.division-accordion-panel{
+    position: relative;
+    isolation: isolate;
+    flex-basis: calc((var(--_panel-padding) * 2) + var(--_button-size));
+    overflow: hidden;
+    padding: var(--_panel-padding);
+    padding-right: calc(var(--_panel-padding) * 5);
+    border-radius: calc(((var(--_panel-padding) * 2) + var(--_button-size)) / 2);
+}
+.button-title{
+    background-color: rgba(0, 0, 0, 0.272);
+}
+@media (prefers-reduced-motion: no-preference) {
+    .adivision-ccordion-panel {
+        transition: flex-basis 500ms, flex-grow 500ms;
+    }
+}
+@media (prefers-reduced-motion: no-preference) {
+    .division-accordion-panel:has([aria-expanded="true"]) .accordian-contents {
+        transition: transform 500ms 500ms, opacity 500ms 500ms;
+    }
+}
+.division-accordion-panel:nth-child(1) {
+    --_panel-color: hsl(350, 70%, 50%);
+}
+.division-accordion-panel:nth-child(2) {
+    --_panel-color: hsl(220, 70%, 50%);
+}
+.division-accordion-panel:nth-child(3) {
+    --_panel-color: #58b1b7;
+}
+.division-accordion-panel:has([aria-expanded="true"]){
+    flex-basis: clamp(15rem, 40vh, 20rem);
+    flex-grow: 1;
+    cursor: default;
+}
+.division-accordion-panel:has([aria-expanded="true"]) p{
+    transform: translateY(0);
+    opacity: 1;
+    cursor: default;
+}
+@media (max-width: 44.999em) {
+    .division-accordion-title::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: calc((var(--_panel-gap) + var(--_button-size)) * -1);
+        width: calc(100% + (var(--_button-size) * 2));
+        height: var(--_button-size);
+        z-index: -1;
+        background: hsl(0 0% 0% / 0.5);
+        border-radius: 100vw;
+    }
+}
+.grey-leader-text{
+    height: auto;
+}
+.grey-rectangle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    margin-left: 1.3rem;
+}
+.grey-leader{
+    display: flex;
+    padding: 8px;
+   background: rgba(255, 255, 255, 0.02);
+   box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.25);
+   backdrop-filter: blur(16px);
+   border-radius: 15px;
+   border: 1px solid rgba(255, 255, 255, 0.18);
+   margin: 15rem 0 0 0;
+}
+.grey-leader-image img {
+    border-radius: 50%;
+    width: 4.5em;
+    height: 4.5em;
+    object-fit: cover;
+    border: black solid 1px;
+    margin-right: 1.5rem;
+}
+.grey-leader-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    margin: 10px 0 0 4px;
+}
+.grey-leader-description {
+    font-size: 14px;
+    margin: 0 0 10px 4px;
+    color: #ffffff;
+}
+.grey-leader-email{
+    color: #58b1b7;
+    text-decoration: none;
+    font-style: italic;
+    font-size: 10px;
+    margin: 0 0 0 4px;
+}
+.grey-leader-email:hover {
+    color: #bfd0d3;
+    cursor: pointer;
+    text-decoration: underline;
+}
+/* Resources CSS */
+.division-resources-container{
+    width: auto;
+    background: linear-gradient(180deg, #030551 0%, rgba(3, 5, 81, 0.4) 100%);
+    position: relative;
+    padding-top: 2rem;
+}
+.division-resources{
+    font-size: 3.125em;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    color: #fff;
+    margin: 0;
+    padding: 1rem 0 2rem 0;
+    text-align: center;
+}
+.division-resource-photos{
+    padding: auto;
+    border-radius: 22px;
+    height: 220px;
+    width: 300px;
+    margin: none;
+    padding: none;
+    transition: filter 400ms linear, transform 400ms linear;
+}
+.division-resource-photos:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+    filter: drop-shadow(20px 45px 10px rgba(0, 0, 0, 0.3));
+}
+.division-resource-links{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-bottom: 3rem;
+}
+/* CB footer CSS */
+.container-4{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 4rem 0 4rem 0;
+}
+.division-logo-title{
+    margin: 0;
+    font-size: 3.125em;
+    font-weight: 800;
+    color: black;
+    letter-spacing: 0.07em;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+.division-contact-us{
+    margin: 0;
+    color: black;
+    font-size: 3.125em;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+.division-contact-text{
+    font-weight: 400;
+    color: black;
+    font-size: 150%;
+    line-height: .8em;
+}
+.division-contact-text:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    color: #A9A9A9;
+}
+.division-official-logo{
+    /* height: 10.5rem;
+    width: 30rem; */
+    height: 55%;
+    width: 130%;
+}
+
+/* Leadership CSS */
+.leadership-title{
+    text-align: center;
+    font-size: 3.125rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    color: #fff;
+    margin: 0;
+    padding: 2rem 0 2rem 0;
+}
+.director-cards{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    width: 90%;
+    flex-basis: 0;
+    flex-grow: 1;
+    margin: auto;
+}
+.leadership-cards{
+    display: flex;
+    max-width: 90%;
+    flex-basis: 0;
+    flex-grow: 1;
+    height: 12.18rem;
+    width: 1250px;
+    flex-direction: row;
+    background: #58b1b7;
+    border-radius: 100px;
+    justify-content: space-around;
+    align-items: center;
+}
+.leader{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 100%;
+}
+.leader-image img {
+    max-width: 150px;
+    border-radius: 50%;
+    width: 125px;
+    height: 100%;
+    object-fit: cover;
+    border: black solid 1px;
+}
+.leader-title {
+    font-size: 160%;
+    color: #fff;
+}
+.leader-description {
+    font-size: 120%;
+    margin: 0 0 0.9375rem 0;
+}
+.leader-text a{
+        color: #0D5565;
+        text-decoration: none;
+        font-size: 100%;
+        font-style: italic;
+}
+.leader-text a:hover {
+    color: #0D5565;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.middle-line{
+    position: absolute;
+    height: 99%;
+    width: 0;
+    border: 1px solid #d9d9d9;
+    padding: none;
+    margin: none;
+}
+.link-to-resource {
+    border: solid 2px black;
+    text-decoration: none;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(20px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 10px;
+    padding: .4rem;
+}
+
+/* CSS for the new divisions section  */
+.left-buttons-right-image-box {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
+}
+
+.mcb-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mcb-button-row {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.mcb-button-box {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #f5f5f5;
+    width: 117px;
+    height: 150px;
+    position: relative;
+    border-radius: 20px;
+    background: linear-gradient(180deg,  #e4edff 9.97%, rgba(81, 119, 255, 0) 101.84%);
+}
+
+.mcb-button-box i {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.mcb-button-box span {
+    text-align: center;
+    color: #1919c9;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.mcb-button-box button {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    left: 3%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color: white;
+    background: #021160;
+    border: none;
+    padding: 5px 15px;
+    font-family: Bai;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.mcb-button-box button:hover{
+    color: #1919c9;
+    background: #a7c4ff;
+    cursor: pointer;
+}
+
+
+#mcb-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+#mcb-box {
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    height: 380px;
+    border-radius: 30px;
+    background: linear-gradient(103.03deg, #021160 48.91%, #20349e 93.47%);
+    overflow: hidden;
+}
+
+#mcb-image {
+    position: absolute;
+    left: 320;
+    max-width: 100%;
+    border-radius: 0px 30px 30px 0px;
+    height: 100%;
+}
+
+#mcb-box .col {
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+    margin-top: 10px;
+    gap: 20px;
+}
+#mcb-title {
+    width: 270px;
+}
+
+#mcb-description {
+    width: 270px;
+}
+
+#mcb-title,
+#mcb-image,
+#mcb-description {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#mcb-title.fade,
+#mcb-image.fade,
+#mcb-description.fade {
+    opacity: 0;
+}
+
+/*HOMEPAGE SPECIFIC STYLING - 
+What does this mean? Copy the CSS below into a script editor web part. The top css is already a css file in a style library. Do not modify the top CSS.*/
+
+.left-buttons-right-image-box{
+    margin: 30px 0 0 -30px;
+    display: flex;
+    justify-content: center;
+}
+
+.mcb-button-box button {
+    left: 2.2rem;
+    margin-bottom: 3px;
+    color: #0a0a86;
+    background: #cbdbfc;
+    position: absolute;
+}
+
+.mcb-button-box p {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    font-size: 12px;
+    color: #030551;
+}
+
+.mcb-buttons {
+    gap: 2.2rem;
+}
+
+.mcb-button-box {
+    width: 130px;
+    height: 95px;
+    background: unset;
+    background: linear-gradient(white, white) padding-box, linear-gradient(to bottom, #065fff, #051047) border-box;
+    border: 4px solid transparent;
+    box-shadow: 0px 9px 9px rgba(0, 0, 0, 0.25);
+    margin: 0 1.5rem 0 0;
+}
+
+.mcb-button-box span {
+    color: #030551;
+    font-size: 20px;
+}
+
+#mcb-description{
+    font-size: 15px;
+    margin: 0;
+}
+
+#mcb-button {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 5%;
+    margin-bottom: 2px;
+    border-radius: 10px;
+    color:#1919c9 ;
+    background: white;
+    border: none;
+    padding: 5px 15px;
+    font-weight: 600;
+}
+
+#mcb-button:hover{
+    color: #1919c9;
+    background: #a7c4ff;
+    text-decoration:none;
+    cursor: pointer;
+}
+
+#mcb-box{
+    background: #030551
+}

@@ -1,0 +1,416 @@
+/* page CSS */
+.CB-container{
+	margin: 0;
+	padding: 0;
+	background-color: #f1f0f1;
+	width: auto;
+	height: auto;
+    font-family: 'Bai Jamjuree', sans-serif;
+}
+
+/* Background Gradient  */
+.gradient-container{
+	width: auto;
+	margin: 0;
+	background: linear-gradient(180deg, #021160 0%, rgba(3, 5, 81, 0.4) 100%);
+    padding-bottom: 2rem;
+}
+
+/* Mission, Vision, Motto Cards  */
+.MVM-cards{
+	display: flex;
+	justify-content: space-evenly;
+}
+.glass-card{
+	margin-top: 3.5rem;
+	max-width: 21vw;
+	height: 26vh;
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+	backdrop-filter: blur(20px);
+	box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	border-radius: 15px;
+	overflow: hidden;
+}
+.glass-card:hover{
+	background-color: #58b1b7;
+	transition: 250ms linear;
+}
+.glass-card::before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -500px;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(90deg, transparent, #fff, transparent);
+	transition: 1s;
+}
+.glass-card:hover::before{
+	left: 100%;
+}
+.glass-card-title{
+	color: #fff;
+	font-size: 3vw;
+	letter-spacing: 0.1em;
+	text-align: center;
+	margin: 0;
+}
+.glass-card-contents{
+	color: #fff;
+	text-align: center;
+	padding: 1rem 2rem 0 2rem;
+	font-size: 1.2vw;
+}
+
+/* Title for Leadership Section  */
+.leadership-title{
+    text-align: center;
+    font-size: 4vw;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    color: #fff;
+    margin: 0;
+    padding: 0 0 2rem 0;
+}
+/* Leadership Cards  */
+.centeredLeaders{
+    display: flex;
+    justify-content: center;
+    margin: 30px 5px;
+}
+.leadership-cards{
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    border-radius: 40px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.leader{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    border-radius: 6px;
+    padding: 5px 5px;
+    background: white;
+    width: 26vw;
+}
+.leader:hover{
+    background-color: #cff4ff;
+    height: 105%;
+}
+.leader-image {
+    display: flex
+}
+.leader-image img {
+    border-radius: 4%;
+    width: 8vw;
+    object-fit: cover;
+}
+.leader-title {
+    font-size: 1.5vw;
+    font-weight: 700;
+}
+.leader-description {
+    font-size: 1.2vw;
+    font-weight: 600;
+    margin: 5px 0 5px 0;
+}
+.leader-text a,
+.leader-text a:hover,
+.leader-text a:active,
+.leader-text a:visited,
+.leader-text a:focus {
+    color: #0090b5;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.18vw;
+    font-style: italic;
+}
+.leader-text a:hover {
+    color: #075d73;
+}
+
+/* About Section */
+.about-title{
+	text-align: center;
+	font-weight: 800;
+	font-size: 4vw;
+	letter-spacing: 0.14em;
+	color: #fff;
+	padding: 2rem 0 2rem 0;
+}
+.about-text{
+	color: #fff;
+	margin: 0 10rem 0 10rem;
+	text-align: center;
+	font-size: 1.5vw;
+	line-height: 1.8em;
+	padding-bottom: 2rem;
+}
+
+/* Divisions Section  */
+.divisions-container{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.divisions-content-container{
+    width: 100%;
+    position: relative;
+}
+.dots-background{
+    opacity: 0.22;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.divisions-title{
+    font-weight: 800;
+    font-size: 4vw;
+    text-align: center;
+    letter-spacing: 0.14em;
+    color: black;
+    margin: 2rem 0 2rem 0;
+    padding: 0;
+}
+.left-buttons-right-image-box {
+    display: flex;
+    flex-direction: row;
+	padding-bottom: 2rem;
+    justify-content: center;
+}
+.mcb-buttons{
+    display: flex;
+    flex-direction: row;
+}
+.mcb-button-row {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+/* Division card  */
+/* Left division section  */
+.button-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.division-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    border-radius: 20px;
+    width: 12vw;
+    height: 21vh;
+    background: linear-gradient(white, white) padding-box, linear-gradient(to bottom, #065fff, #051047) border-box;
+    border: 4px solid transparent;
+    box-shadow: 0px 9px 9px rgba(0, 0, 0, 0.25);
+    margin: 0 1.5rem 0 0;
+	padding: 0 10px 0 10px;
+}
+.division-card span {
+    text-align: center;
+    font-weight: 700;
+    color: #030551;
+    font-size: 2.2vw;
+}
+.division-card i {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+.division-card button {
+    align-self: center;
+    bottom: 0;
+    border-radius: 10px;
+    border: none;
+    padding: 5px 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 0 0 5px 0;
+    color: #0a0a86;
+    background: #cbdbfc;
+	font-size: 1.18vw;
+}
+.division-card button:hover{
+    color: #1919c9;
+    background: #a7c4ff;
+    cursor: pointer;
+}
+.division-card p {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    font-size: 1.4vw;
+    color: #030551;
+	line-height: 1.2;
+}
+
+/* Right division Section  */
+#mcb-title {
+    font-size: 1.56vw;
+    font-weight: 700;
+    margin-top: 5px;
+    width: 21.2vw;
+}
+#mcb-box {
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 58.6vw;
+    height: 72vh;
+    border-radius: 30px;
+    background: linear-gradient(103.03deg, #021160 48.91%, #20349e 93.47%);
+    overflow: hidden;
+}
+#mcb-image {
+    position: absolute;
+    left: 29.4vw;
+    max-width: 100%;
+    border-radius: 0px 30px 30px 0px;
+    height: 100%;
+}
+#mcb-box .col {
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+    margin-top: 10px;
+    gap: 20px;
+}
+#mcb-description {
+    width: 21.2vw;
+    font-size: 1.1vw;
+    margin: 0;
+}
+#mcb-title,
+#mcb-image,
+#mcb-description {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+#mcb-title.fade,
+#mcb-image.fade,
+#mcb-description.fade {
+    opacity: 0;
+}
+#mcb-button {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 5%;
+    margin-bottom: 2px;
+    border-radius: 10px;
+    color:#1919c9 ;
+    background: white;
+    border: none;
+    padding: 5px 15px;
+    font-weight: 600;
+    height: 1.4vw;
+    width: 5vw;
+    font-size: 1vw;
+}
+#mcb-button:hover{
+    color: #1919c9;
+    background: #a7c4ff;
+    text-decoration:none;
+    cursor: pointer;
+}
+#mcb-box{
+    background: #030551
+}
+.grey-leader-text{
+	height: auto;
+}
+.grey-rectangle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    margin-left: 5.5rem;
+    margin-left: 7vw;
+}
+.grey-leader{
+   display: flex;
+   padding: 2px;
+   background: rgba(255, 255, 255, 0.02);
+   box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.25);
+   backdrop-filter: blur(16px);
+   border-radius: 15px;
+   border: 1px solid rgba(255, 255, 255, 0.18);
+   margin: 49vh 0 0 1vw;
+   width: 23.4vw;
+   height: 15.5vh;
+}
+.grey-leader-image{
+    border-radius: 50%;
+    width: 6.5vw;
+    height: 6.5vw;
+    object-fit: cover;
+    border: black solid 1px;
+}
+.grey-leader-title {
+    font-size: 1.7vw;
+    font-weight: 700;
+    color: #fff;
+    margin: 10px 0 0 4px;
+}
+.grey-leader-description {
+    font-size: 1.4vw;
+    margin: 0 0 10px 4px;
+    color: #ffffff;
+}
+.grey-leader-email{
+    color: #ffffff;
+    text-decoration: none;
+    font-style: italic;
+    font-size: 1vw;
+    margin: 0 0 0 4px;
+}
+.grey-leader-email:hover {
+    color: #bfd0d3;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* Resources Section  */
+.division-resources{
+	font-size: 4vw;
+	font-weight: 800;
+	letter-spacing: .14em;
+	color: #fff;
+	margin: 0;
+	padding: 2rem 0 2rem 0;
+	text-align: center;
+}
+.division-resource-photos{
+	padding: auto;
+	border-radius: 22px;
+	height: 100%;
+	width: 22vw;
+	margin: none;
+	padding: none;
+	transition: filter 400ms linear, transform 400ms linear;
+}
+.division-resource-photos:hover{
+	transform: scale(1.2);
+	cursor: pointer;
+	filter: drop-shadow(20px 45px 10px rgba(0, 0, 0, 0.3));
+}
+.division-resource-links{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	padding-bottom: 3rem;
+}

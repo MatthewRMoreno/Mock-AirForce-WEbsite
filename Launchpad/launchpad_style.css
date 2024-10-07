@@ -1,0 +1,88 @@
+*{
+    font-family: 'Bai Jamjuree', sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #030551;
+}
+.launchpad-container{
+    justify-content: center;
+}
+
+.mini-container{
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0 4rem 0
+}
+.launch-card-left{
+    width: 39vw;
+    height: auto;
+    border-radius: 90px 0 0 90px;
+    background-color: #D6E5E3;
+}
+.launch-title{
+    font-size: 2.5vw;
+    margin-bottom: 30px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.launch-title-right{
+    font-size: 2.5vw;
+    margin: 1rem 0 2rem 0;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.links-left{
+    display: flex;
+    text-align: start;
+}
+.links-left a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    background: rgba(0, 0, 0, 0.20);
+}
+.links-left a{
+    color: #000;
+}
+.launch-text{
+    font-size: 1vw;
+    line-height: 3.6vh;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2.5rem;
+}
+.image-right{
+    border-radius: 0 90px 90px 0;
+    width: 28vw;
+    height: auto;
+    object-fit: cover;
+}
+
+.image-left{
+    border-radius: 90px 0 0 90px;
+    width: 39vw;
+    height: auto;
+    object-fit: cover;
+}
+.launch-card-right{
+    width: 28vw;
+    height: auto;
+    border-radius: 0 90px 90px 0;
+    background-color: #D6E5E3;
+    text-align: center;
+}
+.links-right{
+    display: flex;
+    text-align: start;
+    justify-content: center;
+}
+.links-right a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    background: rgba(0, 0, 0, 0.20);
+}
